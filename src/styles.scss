@@ -1,0 +1,45 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+app-header {
+  width: 100%;
+}
+
+.nb-theme-default ng2-smart-table .ng2-smart-actions a.ng2-smart-action {
+  font-size: 1rem !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.3125rem;
+  height: 0.3125rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4e9f2;
+  cursor: pointer;
+  border-radius: 0.15625rem;
+}
+::-webkit-scrollbar-track {
+  background: #f7f9fc;
+}
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+nb-layout-header {
+  z-index: 9 !important;
+}
+
+.cdk-global-scrollblock {
+  position: unset !important;
+}
+

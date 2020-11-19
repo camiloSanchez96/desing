@@ -1,0 +1,208 @@
+/**
+ * 00. Ajuste pagina principal y container
+ *
+ * -------------------------------------------------------------------
+ */
+
+.container{
+    max-width: 100%;
+}
+
+.divPrincipal{
+    background: white;
+}
+
+.desingCard{
+    border-radius: 40px;
+}
+
+
+
+@media screen and (max-width:411px){
+    .desingTab{
+        width: 147%;
+    }
+}
+
+.nb-tabset{
+    max-width: 100% !important;
+    width: 100%; 
+}
+
+
+/**
+ * 01. Animaciones de Banner secundario
+ *
+ * -------------------------------------------------------------------
+ */
+
+.imgConfig:hover {
+    filter: grayscale(80%);
+}
+
+.imgConfig{
+    width: 100%;
+}
+
+/**
+ * 02. Estilo de iconos y animaciones
+ *
+ * -------------------------------------------------------------------
+ */
+
+.containerIcon{
+    border: 0px solid;
+    border-color: #6c757d4f;
+    padding: 10px;
+    border-radius: 19px;
+    box-shadow: 7px 9px 11px 9px #6c757d4f;
+    margin-right: 5%;
+    margin-bottom: 3%;
+}
+
+.iconConfig{
+    width: 64px;
+    cursor: pointer;
+}
+
+.divIcon{
+    text-align: center;
+    display: flex;
+    padding-left: 15%;
+}
+
+
+@media screen and (max-width:1000px){
+	
+    .divIcon{
+        text-align: center;
+        display: flex;
+        padding-left: 0%;
+    }
+    
+  
+}
+
+.iconConfig:hover{-webkit-transform:scale(1.3);transform:scale(1.3);}
+
+.iconConfig {overflow:hidden;}
+
+
+/**
+ * 04. Estilos de banner principal
+ *
+ * -------------------------------------------------------------------
+ */
+
+.widget-user-username {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Vegur, 'PT Sans', Verdana, sans-serif;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    color:#000000;
+}
+
+.widget-user-desc {
+    margin-top: 0;
+    color:#000000;
+    font-size: 26px;
+}
+
+.widget-user-header {
+    padding: 10px;
+    border-radius: 40px;
+    // background: #00000005;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+
+ body{
+    margin-top:20px;
+    background:#eee;
+}
+.box-widget {
+    border: none;
+    position: relative;
+}
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.bg-yellow {
+    background-color: #f39c12 !important;
+}
+.bg-blue {
+    background-color: #0073b7 !important;
+}
+.bg-aqua {
+    background-color: #00c0ef !important;
+}
+.bg-green {
+    background-color: #00a65a !important;
+}
+.bg-red {
+    background-color: #dd4b39 !important;
+}
+
+.widget-user .widget-user-image {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -45px;
+}
+.widget-user .widget-user-image>img {
+    width: 90px;
+    height: auto;
+    border: 3px solid #fff;
+}
+.widget-user .box-footer {
+    padding-top: 30px;
+}
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+}
+.box .border-right {
+    border-right: 1px solid #f4f4f4;
+}
+.description-block {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+}
+.description-block>.description-header {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+.description-block>.description-text {
+    text-transform: uppercase;
+}
+/**
+ * 05. Estilo de graficas
+ *
+ * -------------------------------------------------------------------
+ */
+
+#chart {
+    max-width: 650px;
+    border: 1px solid;
+    color: #d7d7d89e;
+    margin: 35px auto;
+}
+  

@@ -1,0 +1,65 @@
+<nb-card>
+  <nb-card-body>
+      <div class="selectConfig">
+        <nb-select [disabled]="(selectedItem3 !== null || selectedItem2 !== null) && selectedItem === null" class="selectspace" placeholder="Client" [(ngModel)]="selectedItem" (selectedChange)="getFilteredByKey(selectedItem,'Client')">
+          <nb-option *ngFor="let item of listClient" [value]="item.Client">{{item.Client}}</nb-option>
+        </nb-select>
+        <nb-select [disabled]="selectedItem3 !== null && selectedItem2 === null" class="selectspace" placeholder="ACCM"  [(ngModel)]="selectedItem2" (selectedChange)="getFilteredByKey(selectedItem2,'ACCM')">
+          <nb-option *ngFor="let item of listACCM"  [value]="item.ACCM">{{item.ACCM}}</nb-option>
+        </nb-select>
+        <nb-select class="selectspace" placeholder="Supervisor"  [(ngModel)]="selectedItem3" (selectedChange)="getFilteredByKey(selectedItem3,'Supervisor')">
+          <nb-option *ngFor="let item of listSupervisor"  [value]="item.Supervisor">{{item.Supervisor}}</nb-option>
+        </nb-select>
+        <button nbButton outline status="primary" (click)="getData()">Reset Filters</button>
+      </div>
+      <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="optionsSlider" (userChangeEnd)="onUserChangeEnd($event)"></ng5-slider>
+      <div id="chart" class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12 mb-3" style="text-align: center;">
+          <h3 class="vsfDiseño">VSF {{totalDatos}}%</h3>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 mb-3">
+          <chart type="boxplot" [data]="data" [options]="options" class="ajusteGrafico"></chart>
+             <!-- <apx-chart
+              [series]="chartOptionsBox.series"
+              [chart]="chartOptionsBox.chart"
+              [xaxis]="chartOptionsBox.xaxis"
+              [yaxis]="chartOptionsBox.yaxis"
+              [title]="chartOptionsBox.title"
+            ></apx-chart> -->
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 mb-3">
+        <chart type="scatter" [data]="data2" [options]="optionsScatter" class="ajusteGrafico"></chart>
+        <!-- <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [xaxis]="chartOptions.xaxis"
+          [yaxis]="chartOptions.yaxis"
+        ></apx-chart> -->
+      </div>
+      <!-- <div class="containerIcon">
+          <apx-chart
+          [series]="chartOptionsCol.series"
+          [chart]="chartOptionsCol.chart"
+          [dataLabels]="chartOptionsCol.dataLabels"
+          [plotOptions]="chartOptionsCol.plotOptions"
+          [yaxis]="chartOptionsCol.yaxis"
+          [xaxis]="chartOptionsCol.xaxis"
+          [legend]="chartOptionsCol.legend"
+          [colors]="chartOptionsCol.colors"
+          [grid]="chartOptionsCol.grid"
+        ></apx-chart>
+      </div> -->
+      <!-- <div class="containerIcon">
+        <apx-chart
+        [series]="chartOptionsColNeg.series"
+        [chart]="chartOptionsColNeg.chart"
+        [dataLabels]="chartOptionsColNeg.dataLabels"
+        [plotOptions]="chartOptionsColNeg.plotOptions"
+        [yaxis]="chartOptionsColNeg.yaxis"
+        [xaxis]="chartOptionsColNeg.xaxis"
+      ></apx-chart>
+      </div> -->
+    </div>
+  </nb-card-body>
+</nb-card>
+

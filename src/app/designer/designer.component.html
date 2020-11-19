@@ -1,0 +1,95 @@
+<div class="widget-user-header">
+  <h3 class="widget-user-username">Welcome, Camilo Sanchez</h3>
+  <h5 class="widget-user-desc">Developer I</h5>
+</div>
+  <nb-card class="desingCard">
+    <nb-card-body>
+      <nb-tabset fullWidth>
+        <nb-tab tabTitle="Welcome"
+                badgeText="Hi"
+                badgeStatus="danger"
+                class="desingTab">
+        <div  class="container">
+            <div class="row ">
+                <div class="col-md-12 col-sm-12 divIcon">
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/034-shield.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/028-setup.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/018-pie-chart-1.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/029-chat.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/004-password.png">
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 divIcon">
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/005-stats.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/044-search.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/038-user.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/035-upload.png">
+                    </div>
+                    <div class="containerIcon">
+                        <img class="iconConfig m-3" src="../../assets/icons/png/022-id-card.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nb-tab>
+        <nb-tab tabTitle="graphics"
+                badgeText="...."
+                badgePosition="bottom right"
+                badgeStatus="warning"
+                class="desingTab">
+                <div  class="container">
+                    <div class="row ">
+                        <div class="col-md-6 col-sm-12 pl-5 divIcon">
+                            <div id="chart">
+                                <apx-chart
+                                  [series]="chartOptions.series"
+                                  [chart]="chartOptions.chart"
+                                  [xaxis]="chartOptions.xaxis"
+                                  [yaxis]="chartOptions.yaxis"
+                                ></apx-chart>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 pl-5 divIcon">
+                            <div id="chart">
+                                <apx-chart
+                                [series]="chartOptionsBar.series"
+                                [chart]="chartOptionsBar.chart"
+                                [dataLabels]="chartOptionsBar.dataLabels"
+                                [plotOptions]="chartOptionsBar.plotOptions"
+                                [responsive]="chartOptionsBar.responsive"
+                                [xaxis]="chartOptionsBar.xaxis"
+                                [legend]="chartOptionsBar.legend"
+                                [fill]="chartOptionsBar.fill"
+                              ></apx-chart>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+        </nb-tab>
+        <nb-tab tabTitle="Transactions"
+                badgeText="new"
+                badgePosition="top right"
+                badgeStatus="success"
+                class="desingTab">
+        <ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>
+        </nb-tab>
+    </nb-tabset>
+    </nb-card-body>
+  </nb-card>
+<!-- <div>Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div> -->
